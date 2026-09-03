@@ -1,0 +1,334 @@
+:root {
+  /* Palette pulled from the Ramos Designs logo: warm charcoal wordmark +
+     dusty taupe drape icon. See images/ramos-designs-logo.png. */
+  --ink: #4c4c4c;          /* body text — matches the logo's gray wordmark */
+  --accent: #886d5e;       /* links, nav, headings — from the logo's taupe drape */
+  --accent-strong: #5b493e; /* deeper taupe for emphasis / hover / footer */
+  --divider: #ece3dd;      /* soft warm neutral for hr / subtle borders */
+  --cream: #f4ece7;        /* light warm text-on-dark for the footer */
+}
+
+body {
+  color: var(--ink);
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif; /* took from https://fonts.google.com/ */
+}
+
+h2 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; /* took from https://www.cssfontstack.com/ */
+  font-size: 2.5rem;
+  color: var(--accent);
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; /* took from https://www.cssfontstack.com/ */
+  color: var(--accent-strong);
+}
+
+p {
+  line-height: 2;
+}
+
+hr {
+  border: dotted var(--divider) 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+a {
+  color: var(--accent);
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-strong);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Site header / navigation (shared across all pages) ---------- */
+
+.site-header {
+  background-color: #FFFFFF;
+  border-bottom: 3px solid var(--accent);
+  padding: 12px 20px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.logo-link {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  height: 64px;
+  width: auto;
+  max-width: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 10px 14px;
+  margin: 0;
+  font-weight: bold;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: var(--ink);
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--accent-strong);
+  border-bottom: 2px solid var(--accent-strong);
+}
+
+/* ---------- Page title (used on Services / Gallery / About & Contact) ---------- */
+
+.page-title {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: var(--accent);
+  margin: 60px auto 10px;
+}
+
+.page-subtitle {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: var(--ink);
+}
+
+/* ---------- Home hero ---------- */
+
+.top-cointainer {
+  position: relative;
+  padding-top: 20px;
+}
+
+.brand-title {
+  margin: 50px auto 0 auto;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size: clamp(2.75rem, 9vw, 6.25rem);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.middle-container {
+  margin: 100px 0;
+}
+
+.bottom-container {
+  background-color: var(--accent-strong);
+  padding: 50px 0 20px;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+.intro {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ---------- Services ---------- */
+
+.skill-row {
+  width: 60%;
+  max-width: 800px;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  overflow: auto;
+}
+
+.mid {
+  width: 70%;
+  float: inherit;
+  margin-right: 30px;
+}
+
+.guy {
+  width: 48%;
+  float: left;
+  margin-right: 30px;
+}
+
+.light {
+  width: 48%;
+  float: right;
+  margin-left: 30px;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto 100px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 1px 1px 12px 0 rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.gallery-caption {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+/* ---------- About & Contact ---------- */
+
+.about-section {
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto 80px;
+  text-align: left;
+}
+
+.contact-me {
+  width: 100%;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.copyright {
+  color: var(--cream);
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+/**** .btn and .btn:hover were adapted from https://cssbuttoncreator.com/ ***/
+.btn {
+   background: var(--accent);
+   background-image: -webkit-linear-gradient(top, #a4897a, var(--accent-strong));
+   background-image: -moz-linear-gradient(top, #a4897a, var(--accent-strong));
+   background-image: -ms-linear-gradient(top, #a4897a, var(--accent-strong));
+   background-image: -o-linear-gradient(top, #a4897a, var(--accent-strong));
+   background-image: -webkit-gradient(to bottom, #a4897a, var(--accent-strong));
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   color: #FFFFFF;
+   font-family: 'Monserrat', sans-serif;
+   font-size: 20px;
+   font-weight: 100;
+   padding: 20px;
+   -webkit-box-shadow: 1px 1px 20px 0 rgba(0,0,0,0.35);
+   -moz-box-shadow: 1px 1px 20px 0 rgba(0,0,0,0.35);
+   box-shadow: 1px 1px 20px 0 rgba(0,0,0,0.35);
+   text-shadow: 1px 1px 8px rgba(0,0,0,0.35);
+   border: solid var(--accent-strong) 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn:hover {
+   border: solid var(--accent-strong) 1px;
+   background: var(--accent-strong);
+   background-image: -webkit-linear-gradient(top, var(--accent-strong), #3d3128);
+   background-image: -moz-linear-gradient(top, var(--accent-strong), #3d3128);
+   background-image: -ms-linear-gradient(top, var(--accent-strong), #3d3128);
+   background-image: -o-linear-gradient(top, var(--accent-strong), #3d3128);
+   background-image: -webkit-gradient(to bottom, var(--accent-strong), #3d3128);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+
+.footer-link {
+  color: var(--cream);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+  .skill-row {
+    width: 90%;
+  }
+
+  .guy, .light {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .mid {
+    width: 90%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-message {
+    width: 80%;
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    height: 48px;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
